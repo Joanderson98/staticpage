@@ -11321,11 +11321,21 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: linear-gradient(0deg, #1243A8 0%, #113BA9 100%);
+  background: linear-gradient(to left, #0371FC, #760BC9, #0371FC, #760BC9);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: 500% 100%;
+  animation: degrade-animado 5s infinite alternate;
+}
+
+@keyframes degrade-animado {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
 }
 header.masthead .masthead-content {
   z-index: 1;
